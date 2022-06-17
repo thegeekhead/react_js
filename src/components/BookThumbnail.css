@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.BookThumbnail {
+  margin-left: 25%;
+  height: 100%;
+  width: 50%;
+  background-color: grey
+}
+
+.ThumbnailImg {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ThumbnailImgDiv {
+  background-color: brown;
+}
+
+.AbtBook {
+  padding: 8%;
+}
+
+.ThumbnailTitle {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.ThumbnailDesc {
+  font-size: .75em;
+  font-weight: 500;
+}
+
+.BuyBtn {
+  margin: 0 auto;
+  display: block;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 18%;
+  padding-left: 18%;
+  margin-top: 8px;
+  background-color: brown;
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+}
