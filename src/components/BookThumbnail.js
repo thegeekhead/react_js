@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import bookImg from '../assets/book.png'
 
-import './BookThumbnail.css'
+import '../css/BookThumbnail.css'
 
 function BookThumbnail() {
   const [todos, setTodos] = useState([
@@ -41,7 +41,7 @@ function BookThumbnail() {
   return (
     <div className='wrapper'>
       {todos.map(todo => {
-        return(<div className='BookThumbnail'>
+        return(<div key={todo.title} className='BookThumbnail'>
           <div className='ThumbnailImgDiv'>
             <img className='ThumbnailImg' src={todo.img} />
           </div>

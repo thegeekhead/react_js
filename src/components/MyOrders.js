@@ -2,7 +2,7 @@ import React from 'react'
 
 import bookImg from '../assets/book.png'
 
-import './MyOrders.css'
+import '../css/MyOrders.css'
 
 function MyOrders() {
   return (

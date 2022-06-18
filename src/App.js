@@ -3,6 +3,13 @@ import React from 'react';
 
 import Navigation from './components/Navigation';
 
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
+
+
 import BookThumbnail from './components/BookThumbnail';
 
 import Home from './components/Home'
@@ -16,7 +23,15 @@ import Cart from './components/Cart';
 function App() {
   return (
     <>
-    <Cart />
+      <Navigation />
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/myorders' exact element={<MyOrders/>}/>
+          <Route path='/cart' element={<Cart/>} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }

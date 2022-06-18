@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './SelectedBook.css'
+import '../css/SelectedBook.css'
 
 import bookImg from '../assets/book.png'
 
