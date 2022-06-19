@@ -3,8 +3,13 @@ import React from 'react'
 import '../css/SelectedBook.css'
 
 import bookImg from '../assets/book.png'
+import { useNavigate } from 'react-router'
 
-function selectedBook() {
+function SelectedBook() {
+  let navigate = useNavigate();
+  const navigatetocart = () => {
+    return navigate("/cart");
+  }
   return (
     <div className='SelectedBook'>
       <div className='SelectedBookImg'>
@@ -18,7 +23,7 @@ function selectedBook() {
         <a className='BookISBN'>ISBN</a> <br />
         <div className='Btn'>
           <button className='BtnAddToCart'>Add to cart</button>
-          <button className='BtnBuyNow'>Buy Now</button>
+          <button onClick={navigatetocart} className='BtnBuyNow'>Buy Now</button>
         </div>
         <p className='BookDesc'>
           "Lorem ipsum dolor sit amet, consectetur
@@ -39,4 +44,4 @@ function selectedBook() {
   )
 }
 
-export default selectedBook;
+export default SelectedBook;

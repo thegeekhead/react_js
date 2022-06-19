@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import bookImg from '../assets/book.png'
+import { useNavigate } from 'react-router';
+import bookImg from '../assets/book.png';
 
 import '../css/BookThumbnail.css'
 
@@ -38,17 +39,22 @@ function BookThumbnail() {
       img: { bookImg }
     },
   ])
+
+  const navigate = useNavigate();
+  const navigatetoselectedbook = () => {
+    return navigate("/selectedbook")
+  }
   return (
     <div className='wrapper'>
       {todos.map(todo => {
         return(<div key={todo.title} className='BookThumbnail'>
           <div className='ThumbnailImgDiv'>
-            <img className='ThumbnailImg' src={todo.img} />
+            <img className='ThumbnailImg' src={bookImg} />
           </div>
             <div className='AbtBook'>
               <a className='ThumbnailTitle'>{todo.title}</a> <br />
               <a className='ThumbnailDesc'>Book Description</a>
-              <button className='BuyBtn'>Buy Button</button>
+              <button onClick={navigatetoselectedbook} className='BuyBtn'>Buy Button</button>
             </div>
           </div>)
       })}

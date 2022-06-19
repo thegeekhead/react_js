@@ -1,8 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 
 import '../css/Cart.css'
 
 function Cart() {
+  let navigate = useNavigate();
+  const navigatetocheckoutpage = () => {
+    return navigate("/checkout");
+  }
   return (
     <div className='cartdetails'>
       <div className='shippingaddress'>
@@ -38,7 +43,7 @@ function Cart() {
           <a>Total</a> <a>$52.50</a>
         </div>
         <div className='paymentbtn'>
-          <button className='btncart'>Checkout</button>
+          <button onClick={navigatetocheckoutpage} className='btncart'>Checkout</button>
           <button className='btncart'>Cancel</button>
         </div>
       </div>
