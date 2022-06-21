@@ -45,20 +45,20 @@ function BookThumbnail() {
     return navigate("/selectedbook")
   }
   return (
-    <div className='wrapper'>
+    <>
       {todos.map(todo => {
-        return(<div key={todo.title} className='BookThumbnail'>
-          <div className='ThumbnailImgDiv'>
-            <img className='ThumbnailImg' src={bookImg} />
+        return(<div key={todo.title} className='bookthumbnail'>
+          <div className='thumbnailimgdiv'>
+            <img className='thumbnailimg' src={bookImg} />
           </div>
-            <div className='AbtBook'>
-              <a className='ThumbnailTitle'>{todo.title}</a> <br />
-              <a className='ThumbnailDesc'>Book Description</a>
-              <button onClick={navigatetoselectedbook} className='BuyBtn'>Buy Button</button>
+            <div className='abtbook'>
+              <a className='thumbnailtitle'>{todo.title}</a> <br />
+              <a className='thumbnaildesc'>Book Description</a>
+              <button onClick={navigatetoselectedbook} className='buybtn'>Buy Button</button>
             </div>
           </div>)
       })}
-    </div>
+    </>
   )
 }
 

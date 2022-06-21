@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.singleorder {
+  border: 2px solid black;
+  margin: 1%;
+}
+
+.ordertopbar {
+  height: 2%;
+  background-color: rgb(215, 202, 198);
+  font-size: .80em;
+  padding: .25% 1% .25% 1%;
+}
+
+.ordertime {
+}
+
+.orderstatus {
+  float: right;
+}
+
+.orderdesc {
+  display: flex;
+}
+
+.orderimg {
+  flex: 0.1;
+  height: 22.5vh;
+  width: 20%;
+  /* height: 10%;
+  width: 10%; */
+}
+
+.bookimg {
+  height: 100%;
+  width: fit-content;
+}
+
+.orderbrief {
+  padding: 1%;
+  flex: 0.9;
+}
+
+.booktitle {
+  font-size: 1em;
+}
+
+.bookauthor {
+  font-size: .75em;
+}
+
+.bookprice {
+  font-size: .75em;
+}
+
+@media screen and (max-width: 600px) {
+  .orderimg {
+    flex: 0.5;
+  }
+  .orderbrief {
+    flex: 0.5;
+  }
+}

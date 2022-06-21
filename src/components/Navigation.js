@@ -2,6 +2,8 @@ import React from 'react'
 
 import {useNavigate} from 'react-router-dom';
 
+import '../css/Navigation.css'
+
 function Navigation() {
   let navigate = useNavigate();
   const navigatetohome = () => {
@@ -14,15 +16,15 @@ function Navigation() {
     return navigate('/cart')
   }
   return (
-    <div style={{ height: "fit-content", width: "100%", backgroundColor: "red", display: "flex"}}>
-      <div style={{flex:'0.8'}}>
-        <a>eCommerce Site</a>
-        <a> | Page</a>
+    <div className='navbar'>
+      <div className='pagetitle'>
+        <a className='title'>eCommerce Site</a>
+        {/* <a> | Page</a> */}
       </div>
-      <div style={{flex:"0.2"}}>
-        <a onClick={navigatetohome}>Home |</a>
-        <a onClick={navigatetomyorders}> My Orders | </a>
-        <a onClick={navigatetocart}>Cart</a>
+      <div className='pageroutes'>
+        <a className='pages' onClick={navigatetohome}>Home |</a>
+        <a className='pages' onClick={navigatetomyorders}> My Orders | </a>
+        <a className='pages' onClick={navigatetocart}>Cart</a>
       </div>
     </div>
   )

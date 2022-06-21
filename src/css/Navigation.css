@@ -1,0 +1,33 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.navbar {
+  width: 100%;
+  height: 7.5%;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.pages {
+  font-size: .75em;
+  cursor: pointer;
+}
+
+.pagetitle {
+  margin-left: 5vw;
+}
+
+.pageroutes {
+  margin-right: 5vw;
+  margin-left: auto;
+  order: 2;
+}
