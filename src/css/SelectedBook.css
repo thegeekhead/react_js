@@ -4,66 +4,75 @@
   border: 0px;
 }
 
-.SelectedBook {
+.selectedbook {
   display: flex;
   height: 100%;
 }
 
-.SelectedBookImg {
+.selectedbookimg {
   flex: 0.2;
   float: left;
   padding: 1% 0% 1% 1%;
 }
 
-.BookImg {
+.bookimg {
   height: 70%;
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.SelectedBookDetails {
+.selectedbookdetails {
   flex: 0.8;
   float: right;
-  padding: 1%;
+  padding: 5% 4% 1% 1%;
 }
 
-.BookTitle {
+.booktitle {
   font-size: 1em;
 }
 
-.BookPrice {
+.bookprice {
   font-size: .75em;
 }
 
-.BookAuthor {
+.bookauthor {
   font-size: .75em;
 }
 
-.BookPageCount {
+.bookpagecount {
   font-size: .75em;
 }
 
-.BookISBN {
+.bookisbn {
   font-size: .75em;
 }
 
-.Btn {
+.btn {
   margin-top: 1%;
 }
 
-.BtnAddToCart {
-  background-color: brown;
+.btnaddtocart {
+  background-color: lightsalmon;
   color: white;
-  padding: .5%;
+  padding: .5% 2% .5% 2%;
 }
 
-.BtnBuyNow {
-  background-color: brown;
+.btnbuynow {
+  background-color: lightsalmon;
   color: white;
-  padding: .5%;
+  padding: .5% 2% .5% 2%;
   margin-left: 2%;
 }
 
-.BookDesc {
+.bookdesc {
   font-size: .90em;
   margin-top: 1%;
+}
+
+@media screen and (max-width: 648px){
+  .selectedbook {
+    flex-direction: column;
+  }
 }

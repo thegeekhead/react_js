@@ -4,6 +4,10 @@
   border: 0px;
 }
 
+.navbar {
+  width: auto;
+}
+
 .singleorder {
   border: 2px solid black;
   margin: 1%;

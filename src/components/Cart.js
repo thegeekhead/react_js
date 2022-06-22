@@ -11,7 +11,7 @@ function Cart() {
   return (
     <div className='cartdetails'>
       <div className='shippingaddress'>
-        <span>Shipping Address</span>
+        <div className='carttitle'>Shipping Address</div>
         <div className='addressform'>
           <input className='form-control'
             placeholder='Street' />
@@ -30,17 +30,17 @@ function Cart() {
         </div>
       </div>
       <div className='shoppingbag'>
-        <span>Shopping Bag</span>
+        <div className='carttitle'>Shopping Bag</div>
         <div className='selectedbooks addressform'>
           SELECTED BOOKS
         </div>
         <span>Payment Info</span>
         <div className='paymentinfo'>
-          <a>Items Price</a> <a>$40.00</a> <br/>
-          <a>Tax</a> <a>$7.50</a> <br/>
-          <a>Shipping Charge</a> <a>$5.00</a> <br/>
+          <a className='amt-title'>Items Price</a> <a className='amt-title amt'>$40.00</a> <br/>
+          <a className='amt-title'>Tax</a> <a className='amt-title amt'>$7.50</a> <br/>
+          <a className='amt-title'>Shipping Charge</a> <a className='amt-title amt'>$5.00</a> <br/>
           <hr />
-          <a>Total</a> <a>$52.50</a>
+          <a className='amt-title'>Total</a> <a className='amt-title amt'>$52.50</a>
         </div>
         <div className='paymentbtn'>
           <button onClick={navigatetocheckoutpage} className='btncart'>Checkout</button>

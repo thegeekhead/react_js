@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import bookImg from '../assets/book.png';
+import { initialState } from '../Redux/Reducer';
+import { store } from '../Redux/Store';
+
+import { viewSelectedBook } from '../Redux/Action.js';
+
+import * as Actions from '../Redux/Action.js'
+import { createStore, bindActionCreators } from 'redux'
+import { connect, Provider } from 'react-redux'
 
 import '../css/BookThumbnail.css'
 
-function BookThumbnail() {
+function BookThumbnailElement() {
+  console.log(store.getState());
   const [todos, setTodos] = useState([
     {
       title: 'one',
@@ -40,8 +49,11 @@ function BookThumbnail() {
     },
   ])
 
+  const dispatch = store.dispatch();
   const navigate = useNavigate();
   const navigatetoselectedbook = () => {
+    dispatch(viewSelectedBook({name:"PYTHON"}));
+    console.log(store.getState());
     return navigate("/selectedbook")
   }
   return (
@@ -61,5 +73,13 @@ function BookThumbnail() {
     </>
   )
 }
+function mapStateToProps(state) {
+  return state;
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+let BookThumbnail = connect(mapStateToProps, mapDispatchToProps)(BookThumbnailElement);
 
 export default BookThumbnail;

@@ -1,0 +1,1 @@
+export const viewBook = "VIEW_BOOK";
